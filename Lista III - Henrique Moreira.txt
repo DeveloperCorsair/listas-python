@@ -1,0 +1,57 @@
+# EXERCÍCIO 1
+
+nota = int(input('Digite um valor entre 01 e 10: '))
+ 
+while nota < 1 or nota > 10:
+    print('Número inválido. Digite um número entre 01 e 10')
+    nota = int(input('Tente novamente: '))
+print('Excelente opção!')
+
+# EXERCÍCIO 2
+
+nome = input('Digite seu nome: ')
+senha = input('Digite sua senha: ')
+ 
+while senha == nome:
+    print('Sua senha não pode ser ter o mesmo nome de seu usuário! Tente novamente')
+    nome = str(input('Digite seu nome: '))
+    senha = str(input('Digite sua senha: '))
+print('Tudo certo!')
+
+# EXERCÍCIO 3
+ 
+afeganistao = 80000 # País 1
+brasil = 200000 # País 2
+ano = 0
+ 
+while afeganistao <= brasil:
+    ano += 1
+    afeganistao = afeganistao * 1.03
+    brasil = brasil * 1.015
+    print(f'Ano: {ano}, População Br: {brasil:.2f}, população Af: {afeganistao:.2f}')
+ano += 1
+print(f'Ano {ano}. A população do Afeganistão: {afeganistao:.2f} é maior que a do Brasil: {brasil:.2f}')
+
+# EXERCÍCIO 4
+
+num = int(input('Digite um número: '))
+
+a, b = 1, 1
+rep = 1
+
+while rep <= num-1:
+    a, b = b, a + b
+
+    rep += 1
+print(a)
+
+# EXERCÍCIO 5
+
+num1 = int(input('Digite um número: '))
+num2 = int(input('Digite outro número: '))
+
+while num2 != 0:
+    resto = num1 % num2
+    num1 = num2
+    num2 = resto
+print(f'O MDC é: {num1}')

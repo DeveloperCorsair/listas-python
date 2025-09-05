@@ -1,0 +1,115 @@
+EXERCÍCIO 1
+ 
+number1 = int(input('Digite um número: '))
+number2 = int(input('Digite outro número para rezlizar a conta: '))
+ 
+soma = number1 + number2
+ 
+print(soma)
+ 
+
+EXERCÍCIO 2
+ 
+valor = float(input('Nos fale qual valor vc deseja: '))
+
+mili = valor /1000
+
+print(f'O valor em metros que você pediu era {valor}m e convertido para milímetros fica: {mili}mm')
+ 
+
+EXERCÍCIO 3
+ 
+dia = int(input('Digite a quantidade de dias: '))
+hora = float(input('Digite a quantidade de horas: '))
+minu = float(input('Digite a quantidade de minutos: '))
+seg = int(input('Digite a quantidade de segundos: '))
+ 
+day = dia * 86400
+hour = hora * 3600
+minutes = minu * 60
+ 
+total = day + hour + minutes + seg
+
+print(f'O total de segundos é: {total:.3f}s')
+ 
+
+EXERCÍCIO 4
+ 
+sal = float(input('Digite seu salário: '))
+aumento = int(input('Digite o valor do aumento: '))
+
+total = sal + sal * (aumento / 100)
+ 
+print(f'Seu salário era R${sal}, com o aumento de {aumento}% agora seu novo salário é: R${total}') 
+
+
+EXERCÍCIO 5
+
+preco = float(input('Digite o preço da mercadoria: '))
+desconto = float(input('Digite o desconto para a mercadoria: '))
+
+valor = preco - preco * (desconto / 100)
+
+print(f'Mercadoria: R${preco}. O valor do desconto é {desconto}%, sendo assim, o valor a pagar será de: R${valor}')
+
+
+EXERCÍCIO 6
+
+dis = float(input('Escreva a distância(KM): '))
+vel = float(input('Qual a velocidade média(Km/h): '))
+
+tempo = dis / vel
+
+print(f'O tempo de chegada ao destino é: {tempo:.2f}hrs')
+
+
+EXERCÍCIO 7
+
+#Conversão de Celsius para Fahrenheit 
+
+cel = float(input('Qual a temperatura em Celsius: '))
+
+conversao = cel * 9/5 + 32
+
+print(f'A temperatura de {cel:.1f}°C em Fahrenheit é: {conversao:.1f}°F')
+
+#Conversão de Fahrenheit para Celsius
+
+fah = float(input('Digite a temperatura em Fahrenheit: '))
+
+temp = (fah -32) * 5/9
+
+print(f'A temperatura de {fah:.1f}°F em Celsius é: {temp:.1f}°C')
+
+
+EXERCÍCIO 8
+
+dist = float(input('Quantos KMs você percorreu: '))
+dias = int(input('Quantos dias o carro foi alugado: '))
+carro = 60
+km = 0.15
+
+preco =  (dist * km) + dias * carro
+
+print(f'O valor gasto foi: R${preco:.2f}')
+
+
+EXERCÍCIO 9
+
+dias = int(input('Quantos cigarros você fuma por dia: '))
+anos = int(input('Por quantos anos você fumou na sua vida: '))
+
+cigarros = dias * 365 *anos
+vida = cigarros * 10
+
+#aqui converte o tempo em minutos (1 dia = 1440min)
+tempo = vida / 1440
+
+print(f'O tempo total de vida que você perdeu por conta do cigarro é: {tempo:.2f} dias')
+
+
+EXERCÍCIO 10
+
+numero = str(2 ** 10000)
+
+print(len(numero))

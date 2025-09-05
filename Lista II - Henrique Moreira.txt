@@ -1,0 +1,123 @@
+# EXERCÍCIO 1
+
+esq = int(input('Digite o valor do primeiro lado: '))
+dit = int(input('Digite o valor do segundo lado: '))
+base = int(input('Digite o valor da base: '))
+ 
+if esq + dit < base:
+    print('A soma dos dois lados não pode ser menor que a base!')
+elif esq == dit:
+    print('Triângulo isósceles')
+elif esq == dit and esq == base:
+    print('Triângulo equilátero')
+elif esq != dit and esq != base and dit != base:
+    print('Triângulo escaleno')
+ 
+# EXERCÍCIO 2
+ 
+ano = int(input('Digite um ano: '))
+ 
+if ano % 4 != 0:
+    print(f'{ano} não é bissexto')
+elif ano % 100 != 0:
+    print(f'{ano} é um ano bissexto')
+elif ano % 400 != 0:
+    print(f'{ano} não é bissexto')
+else: 
+    print(f'{ano} é um ano bissexto')
+ 
+# EXERCÍCIO 3
+ 
+peso = int(input('Digite o valor do peso: '))
+lim = 50
+multa = (peso - 50) * 4
+ 
+if peso > 50:
+    print(f'O valor de {peso} é maior que o permitido. Sua multa é de R${multa:.2f}')
+else:
+    print(f'Peso permitido. multa = R$0')
+ 
+# EXERCÍCIO 4
+
+valor1 = float(input('Digite um valor: '))
+valor2 = float(input('Digite outro valor: '))
+valor3 = float(input('Digite o terceiro valor: '))
+
+if valor1 > valor2 and valor1 > valor3:
+    print(f'O primeiro valor {valor1:.0f} é o maior de todos')
+elif valor2 > valor1 and valor2 > valor3:
+    print(f'O segundo valor {valor2:.0f} valor é o maior de todos')
+elif valor3 > valor1 and valor3 > valor2:
+    print(f'O terceiro valor {valor3:.0f} é o maior de todos')
+else:
+    print('Todos tem o mesmo valores.')
+ 
+# EXERCÍCIO 5
+ 
+valor1 = int(input('Digite um número: '))
+valor2 = int(input('Digite o segundo número: '))
+valor3 = int(input('Digite o terceiro número: '))
+ 
+# Usando if
+
+if valor1 > valor2 and valor1 > valor3:
+    print(f'O primeiro número é o maior: {valor1}')
+elif valor2 > valor1 and valor2 > valor3:
+    print(f'O segundo número é o maior: {valor2}')
+else:
+    print(f'O terceiro número é o maior: {valor3}')
+if valor1 < valor2 and valor1 < valor3:
+    print(f'O primeiro número é o menor: {valor1}')
+elif valor2 < valor1 and valor2 < valor3:
+    print(f'O segundo número é o menor: {valor2}')
+else:
+    print(f'O terceiro número é o menor: {valor3}')
+
+"""   
+# Usando max & min
+# Encontrei as funções no Built-in Functions
+
+maior = max(valor1, valor2, valor3)
+menor = min(valor1, valor2, valor3)
+ 
+print(f'O maior número é {maior}')
+print(f'O menor número é {menor}')
+"""
+
+print(f'Descontos: {tir}')
+
+# EXERCÍCIO 6
+ 
+hora = float(input('Quanto você ganha por hora: '))
+trab = float(input('Quantas horas você trabahou esse mês: '))
+sal = hora * trab
+
+ir, inss, sind = 0.11, 0.08, 0.05
+
+d_ir = ir * sal
+d_inss = inss * sal
+d_sind = sind * sal
+
+des = d_ir + d_inss + d_sind
+
+liq = sal - des
+
+print(f'Salário bruto: {sal:.2f}')
+print(f'Total de desconto: {des}')
+print(f'Desconto IR: {d_ir}')
+print(f'Desconto INSS: {d_inss}')
+print(f'Desconto Sindicato: {d_sind}')
+print(f'Salário líquido: {liq:.2f}') 
+
+# EXERCÍCIO 7
+
+import math
+
+area = int(input('Qual o tamanho da área em m²: '))
+litro = area / 3
+lata = math.ceil(litro / 18) # arredonda o número para o próximo da sequência, além de deixar em INT
+total = lata * 80
+
+print(f'Esse é o total de latas de tintas que você precisa comprar: {lata}')
+print(f'Preço total: {total}')
+ 

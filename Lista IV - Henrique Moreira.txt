@@ -1,0 +1,107 @@
+# Exercício 1
+ 
+import random
+ 
+quant = 10
+number = [random.randint(1, 101) for i in range(quant)]
+ 
+menor = 101
+maior = 0
+ 
+for valor in number:
+    if valor < menor:
+        menor  = valor
+    if valor > maior:
+        maior = valor
+
+print(f"Os números da lista são: {number}") 
+print(f'O menor valor da sequência é: {menor}')
+print(f'O maior valor da sequência é: {maior}')
+
+# Exercício 2
+ 
+import random
+ 
+quant = 20
+
+numbers = [random.randint(0, 101) for i in range(quant)]
+par = []
+impar = []
+
+for i in numbers:
+    if i % 2 == 0:
+        par.append(i)
+    if i % 2 == 1:
+        impar.append(i)
+
+print(f"Os números da lista são: {numbers}") 
+print(f'Os números pares são: {par}')
+print(f'Os números ímpares são: {impar}')
+
+# Exercício 3
+ 
+import random
+ 
+primeiro = [random.randint(0, 101) for i in range(10)]
+segundo = [random.randint(0, 101) for i in range(10)]
+numbers = []
+
+for i in zip(primeiro, segundo):
+    numbers.append(i)
+
+print(f'Os números pares são: {primeiro}')
+print(f'Os números ímpares são: {segundo}')
+print(f"Os números da lista são: {numbers}") 
+
+# EXERCÍCIO 4
+
+import re
+ 
+texto = '''“ The Python Software Foundation and the global Python
+community welcome and encourage participation by everyone. Our community is based on
+mutual respect, tolerance, and encouragement, and we are working to help each other live up
+to these principles. We want our community to be more diverse: whoever you are, and
+whatever your background, we welcome you. ”'''
+ 
+res = re.sub(r"[.,:;]", " ", texto)
+ 
+palavras = res.split()
+ 
+words = "python"
+ 
+resultado = []
+ 
+for palavra in palavras:
+    palavra = palavra.lower()
+    if palavra[0] in words or palavra[-1] in words:
+        resultado.append(palavra)
+ 
+print(resultado)
+
+# EXERCÍCIO 5
+
+import re
+ 
+texto = '''“ The Python Software Foundation and the global Python
+community welcome and encourage participation by everyone. Our community is based on
+mutual respect, tolerance, and encouragement, and we are working to help each other live up
+to these principles. We want our community to be more diverse: whoever you are, and
+whatever your background, we welcome you. ”'''
+ 
+res = re.sub(r"[.,:;]", " ", texto)
+ 
+palavras = res.split()
+ 
+words = "python"
+ 
+resultado = []
+ 
+letras_python = set("python")
+
+resultado = [
+    p for p in palavras
+    if len(p) > 4 and any(letra in letras_python for letra in p)
+]
+
+print(resultado)
+print(len(resultado))
