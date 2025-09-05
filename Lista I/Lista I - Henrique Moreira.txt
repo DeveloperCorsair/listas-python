@@ -99,7 +99,7 @@ EXERCÍCIO 9
 dias = int(input('Quantos cigarros você fuma por dia: '))
 anos = int(input('Por quantos anos você fumou na sua vida: '))
 
-cigarros = dias * 365 *anos
+cigarros = dias * 365 * anos
 vida = cigarros * 10
 
 #aqui converte o tempo em minutos (1 dia = 1440min)

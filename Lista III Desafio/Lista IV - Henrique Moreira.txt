@@ -1,0 +1,29 @@
+# Exercício 1
+ 
+pessoa = int(input('Digite um número: '))
+ 
+number = int(input('Mais um número: '))
+number2 = int(input('Outro número: '))
+number3 = int(input('Último número: '))
+ 
+for i in range(1, pessoa + 1):
+    p = i * (i + 1) // 2 
+    if p == pessoa:
+        print('É um número triangular!')
+        break
+    elif p > pessoa:
+        print('NÃO é um número triangular.')
+        break
+ 
+# Exercício 4
+ 
+number = int(input('Digite um número: '))
+ 
+for i in range(2, number):
+    if number % i == 0:
+        print('número não é primo.')
+        break
+    elif number % i != 0:
+        print('É um número primo.')
+        break
+ 
