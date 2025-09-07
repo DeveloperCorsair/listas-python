@@ -1,0 +1,72 @@
+# Exercício 1
+ 
+numero = int(input('Digite um número: '))
+ 
+for i in range(1, numero + 1):
+    p = i * (i + 1) // 2 
+    if p == numero:
+        print('É um número triangular!')
+        break
+    elif p > numero:
+        print('NÃO é um número triangular.')
+        break
+else:
+    print('NÃO é um número triangular.')
+
+#Exercício 2
+
+conta = int(input('Valor: '))
+pag = int(input('Quanto: '))
+
+troco = pag - conta
+
+if conta <= 0:
+    print('Não pode ser zero ou negativo!')
+elif troco == 0:
+    print('Não há troco.')
+elif conta > pag:
+    print('Valor insuficiente para pagar a conta!')
+else:
+    notas = [50, 20, 10, 5, 2, 1]
+
+    for i in notas:
+        pagar_troco = troco // i 
+        
+        if pagar_troco > 0:
+            print(f'{pagar_troco} nota(s) de {i}')
+            troco -= pagar_troco * i
+            
+# Exercício 3
+
+primo = int(input('Digite: '))
+
+if primo <= 1:
+    print('Não é um número primo. O número preciso ser positivo!')
+else:
+    for i in range(2, primo):
+        if primo % i == 0:
+            print('Não é um número primo')
+            break
+    else:
+        print('É um número primo')
+        
+# Exercício 4
+ 
+number = int(input('Digite um número: '))
+fator = []
+
+for i in range(2, number):
+    while number % i == 0:
+        fator.append(i)
+        number = number // i
+print(f"Fatores primos: {fator}")
+
+# Exercício 5
+
+number = int(input('Número: '))
+number = str(number)
+
+convert = number[::-1]
+converted = int(convert)
+
+print(converted)
