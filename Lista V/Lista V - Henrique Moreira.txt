@@ -1,0 +1,39 @@
+#Exercício 1 
+
+x = 2
+y= 5
+
+if y > 8:
+    y = y * 2
+else:
+    x = x * 2
+print(x + y)
+
+#Exercício 2 
+
+contador = 1
+
+for i in range(1, 10):
+    if i != 3:
+        for j in range(1, 7):
+            print(f'{contador}: oi')
+            contador += 1
+
+#Exercício 3 
+
+quant = 1
+
+for i in range(1067, 3627):
+    if i % 2 == 0:
+        # print(i) para mostrar quais são os números pares e divsiveis por 7
+        while i % 7 == 0:            
+            print(f'{quant}')
+            quant += 1
+            break
+
+#Exercício 4
+
+for i in range(18644, 33087):
+    i = str(i)
+
+    print(i)
