@@ -25,14 +25,23 @@ numero = '''
 637656 641136 644176 644973 647617 652218 657143 659902
 662224 666265 668010 672480 672695 676868 677125 678315'''.split()
 
+# Função para contar se a soma dos números é par e
+print('Números pares e ímpares') 
 def seq(numero):
     for k in numero:
-        soma = sum(int(numero) for numero in k)
+        soma = sum(int(digito) for digito in k)
 
-        if soma < 21:
-            if soma % 2 == 0:
-                print(f'Par: {k} | Total da conta | {soma}')
-            else:
-                print(f'Ímpar: {k} | Total da conta | {soma}')
-
+        if soma % 2 == 0:
+            print(f'Par: {k} | Total da conta: {soma}')
+        else:
+            print(f'Ímpar: {k} | Total da conta: {soma}')
 seq(numero)
+print('Primeiro e último número não iguais')
+# Função que evita o retorno se o primeiro e último digito forem ==
+def last_first(numero):
+    for i in numero:
+            if i[0] == i[-1]:
+                next
+            else:
+                print(i)
+last_first(numero)
