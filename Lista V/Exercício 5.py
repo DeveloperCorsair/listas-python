@@ -37,6 +37,7 @@ def seq(numero):
             print(f'Ímpar: {k} | Total da conta: {soma}')
 seq(numero)
 print('Primeiro e último número não iguais')
+
 # Função que evita o retorno se o primeiro e último digito forem ==
 def last_first(numero):
     for i in numero:
