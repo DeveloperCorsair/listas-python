@@ -27,26 +27,16 @@ numero = '''
 
 # Função para identificar números consecutivos que são iguais 
 def numero_igual(numero):
-    contador = 1
     for p in numero:
-            if p[0] == p [1]:
-                  print(p +' numero rep')
-            elif p[1] == p[2]:
-                  print(p + 'rep')
-            elif p[2] == p[3]:
-                  print(p + 'rep')
-            elif p[3] == p[4]:
-                  print(p + 'rep')
-            elif p[4] == p[5]:
-                  print(p + 'rep')
-            else:
-                  print(p + 'a')
-            contador += 1
-numero_igual(numero)
+        rep = False
+        for k in range(len(p) - 1):
+            if p[k] == p[k + 1]:
+                rep = True
+                break
+        if not rep:
+            print(p)
 
-"""
-# Função para contar se a soma dos números é par e
-print('Números pares e ímpares')
+# Função para contar se a soma dos números é par
 def seq(numero):
     for k in numero:
         soma = sum(int(digito) for digito in k)
@@ -55,8 +45,6 @@ def seq(numero):
             print(f'Par: {k} | Total da conta: {soma}')
         else:
             print(f'Ímpar: {k} | Total da conta: {soma}')
-seq(numero)
-print('Primeiro e último número não iguais')
 
 # Função que evita o retorno se o primeiro e último digito forem ==
 def last_first(numero):
@@ -65,4 +53,4 @@ def last_first(numero):
                 next
             else:
                 print(i)
-last_first(numero) """
+
