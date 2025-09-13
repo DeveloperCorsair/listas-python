@@ -24,7 +24,8 @@ numero = '''
 618314 622752 626345 626632 628889 629457 629643 633673
 637656 641136 644176 644973 647617 652218 657143 659902
 662224 666265 668010 672480 672695 676868 677125 678315'''.split()
- 
+
+# Função para identificar números consecutivos que são iguais 
 def numero_igual(numero):
     contador = 1
     for p in numero:
@@ -32,11 +33,17 @@ def numero_igual(numero):
                   print(p +' numero rep')
             elif p[1] == p[2]:
                   print(p + 'rep')
-            print(p)
+            elif p[2] == p[3]:
+                  print(p + 'rep')
+            elif p[3] == p[4]:
+                  print(p + 'rep')
+            elif p[4] == p[5]:
+                  print(p + 'rep')
+            else:
+                  print(p + 'a')
             contador += 1
- 
 numero_igual(numero)
- 
+
 """
 # Função para contar se a soma dos números é par e
 print('Números pares e ímpares')
@@ -50,7 +57,7 @@ def seq(numero):
             print(f'Ímpar: {k} | Total da conta: {soma}')
 seq(numero)
 print('Primeiro e último número não iguais')
- 
+
 # Função que evita o retorno se o primeiro e último digito forem ==
 def last_first(numero):
     for i in numero:
