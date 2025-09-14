@@ -27,30 +27,42 @@ numero = '''
 
 # Função para identificar números consecutivos que são iguais 
 def numero_igual(numero):
-    for p in numero:
-        rep = False
-        for k in range(len(p) - 1):
-            if p[k] == p[k + 1]:
-                rep = True
-                break
-        if not rep:
-            print(p)
+      resultado = []
+      for p in numero:    
+            rep = False
+            for k in range(len(p) - 1):
+                  if p[k] == p[k + 1]:
+                        rep = True
+                        break
+            if not rep:
+                  resultado.append(p)
+      return resultado
 
 # Função para contar se a soma dos números é par
 def seq(numero):
-    for k in numero:
-        soma = sum(int(digito) for digito in k)
+      resultado = []
+      for k in numero:
+            soma = sum(int(digito) for digito in k)
  
-        if soma % 2 == 0:
-            print(f'Par: {k} | Total da conta: {soma}')
-        else:
-            print(f'Ímpar: {k} | Total da conta: {soma}')
+            if soma % 2 == 0:
+                  resultado.append(k)
+      return resultado
 
 # Função que evita o retorno se o primeiro e último digito forem ==
 def last_first(numero):
-    for i in numero:
-            if i[0] == i[-1]:
-                next
-            else:
-                print(i)
+      resultado = []
+      for i in numero:
+            if i[0] != i[-1]:
+                  resultado.append(i)
+      return resultado
+
+def validos (numero):
+      def1 = set(numero_igual(numero))
+      def2 = set(seq(numero))
+      def3 = set(last_first(numero))
+
+      return list(def1 & def2 & def3)
+
+resultado = len(validos(numero))
+print('Lista de números que a soma total é par, incial e final não idênticos e não possui números iguais consecutivos:', resultado)
 
