@@ -1,3 +1,5 @@
+#Exercício E
+
 numero = '''
 213752 216732 221063 221545 225583 229133 230648 233222
 236043 237330 239636 240138 242123 246224 249183 252936
@@ -65,4 +67,3 @@ def validos (numero):
 
 resultado = len(validos(numero))
 print('Lista de números que a soma total é par, incial e final não idênticos e não possui números iguais consecutivos:', resultado)
-

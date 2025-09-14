@@ -1,4 +1,4 @@
-#Exercício 2 
+#Exercício B 
 
 contador = 1
 
