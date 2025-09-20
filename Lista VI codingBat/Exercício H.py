@@ -4,8 +4,8 @@
 # apaga('kitten', 1) -> 'ktten'
 # apaga('kitten', 4) -> 'kittn'
 def apaga(s, n):
-  nova = len(s - s[n])
-  return nova
+  return s[:n] + s[n+1:]
+print(apaga('kitten', 1))
 
 
 # Provided simple test() function used in main() to print
