@@ -5,9 +5,9 @@
 Aqueles que querem ver uma resolução diferente da sua própria, podem ver aqui uma outra forma de fazer os exercícios.
 
 - Apenas contém as listas do 1°Semestre de Desenvolvimento de Software Multiplataforma (DSM);
-- Arquivos estão separados em cada exercício, mas também tem os arquivos 'Lista'. Onde todos eles estão juntos para uma visualização mais rápida e objetiva.
+- Os arquivos estão separados em cada exercício, mas também tem os arquivos 'Lista', onde todos eles estão juntos para uma visualização mais rápida e objetiva.
 
-### Conselho
+### Alguns conselhos!
 
 - Recomendo tentar fazer as listas primeiro para depois vir aqui ver as resoluções;
 - Além de ver no youtube como o Massanori faz elas (apesar de alguns exercícios deixar mais confuso do que antes);
