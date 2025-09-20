@@ -7,7 +7,6 @@ def apaga(s, n):
   return s[:n] + s[n+1:]
 print(apaga('kitten', 1))
 
-
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
 def test(obtido, esperado):
