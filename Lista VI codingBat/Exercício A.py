@@ -6,7 +6,6 @@
 def dormir(dia_semana, feriado):
   return not dia_semana or feriado
 
-
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
 def test(obtido, esperado):
