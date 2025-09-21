@@ -5,7 +5,6 @@
 # retorne True quando houver problemas
 def alunos_problema(a_sorri, b_sorri):
   return a_sorri == b_sorri
-print(alunos_problema(True, True))
 
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
