@@ -3,7 +3,7 @@
 # string_splosion('abc') -> 'aababc'
 # string_splosion('ab') -> 'aab'
 def string_splosion(s):
-  return [s[:-1] + s[0:] for i in range(len(s))]
+  return ''.join([s[:i+1] for i in range(len(s))])
 
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
