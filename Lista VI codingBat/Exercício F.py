@@ -3,7 +3,6 @@
 # retorna True se um dos dois é 10 ou a soma é 10
 def dez(a, b):
     return a == 10 or b == 10 or a + b == 10
-print(dez(2, 10))
 
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
