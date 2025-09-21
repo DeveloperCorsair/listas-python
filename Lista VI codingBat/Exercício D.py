@@ -5,12 +5,8 @@
 # diff21(25) -> 8
 # dica: abs(x) retorna o valor absoluto de x
 def diff21(n):
-    d = abs(n - 21)
-    if n > 21:
-        return abs(d * 2)
-    return abs(n - 21)
-print(diff21(19))
-
+  return abs(2 * (n - 21)) if n > 21 else abs(n - 21)
+  
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
 def test(obtido, esperado):
