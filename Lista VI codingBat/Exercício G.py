@@ -7,7 +7,6 @@
 # dista10(89) -> False
 def dista10(n):    
     return abs(n - 100) <= 10 or abs(n - 200) <= 10
-print(dista10(93))
 
 
 # Provided simple test() function used in main() to print
