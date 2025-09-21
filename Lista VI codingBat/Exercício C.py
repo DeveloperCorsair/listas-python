@@ -4,11 +4,7 @@
 # soma_dobro(1, 2) -> 3
 # soma_dobro(2, 2) -> 8
 def soma_dobro(a, b):
-    if a == b:
-        return 2 * (a + b)
-    else:
-        return a + b
-print(soma_dobro(1, 2))
+  return (2 * (a + b)) if a == b else a + b 
 
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
