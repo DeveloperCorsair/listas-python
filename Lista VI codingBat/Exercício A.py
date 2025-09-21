@@ -5,7 +5,6 @@
 # retorne True ou False conforme você vá dormir ou não
 def dormir(dia_semana, feriado):
   return not dia_semana or feriado
-print(dormir(False, True))
 
 
 # Provided simple test() function used in main() to print
