@@ -3,7 +3,6 @@
 def array_count9(nums):
   return nums.count(9)
 
-
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
 def test(obtido, esperado):

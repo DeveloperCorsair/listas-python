@@ -1,21 +1,22 @@
+# Exercícios by Nick Parlante (CodingBat)
 # A. multstring
 # seja uma string s e um inteiro positivo n
 # retorna uma string com n cópias da string original
 # multstring('Hi', 2) -> 'HiHi'
 def multstring(s, n):
-  return 
+  return s*n
 
 # B. string_splosion
 # string_splosion('Code') -> 'CCoCodCode'
 # string_splosion('abc') -> 'aababc'
 # string_splosion('ab') -> 'aab'
 def string_splosion(s):
-  return 
+  return ''.join([s[:i+1] for i in range(len(s))])
 
 # C. array_count9
 # conta quantas vezes aparece o 9 numa lista nums
 def array_count9(nums):
-  return
+  return nums.count(9)
 
 # D. array_front9
 # verifica se pelo menos um dos quatro primeiros é nove
@@ -23,7 +24,7 @@ def array_count9(nums):
 # array_front9([1, 2, 3, 4, 9]) -> False
 # array_front9([1, 2, 3, 4, 5]) -> False
 def array_front9(nums):
-  return
+  return True if nums[0:3].count(9) else False
 
 # E. hello_name
 # seja uma string name
@@ -31,14 +32,14 @@ def array_front9(nums):
 # hello_name('Alice') -> 'Hello Alice!'
 # hello_name('X') -> 'Hello X!'
 def hello_name(name):
-  return
+  return 'Hello ' + name + '!'
 
 # F. make_tags
 # make_tags('i', 'Yay'), '<i>Yay</i>'
 # make_tags('i', 'Hello'), '<i>Hello</i>'
 # make_tags('cite', 'Yay'), '<cite>Yay</cite>'
 def make_tags(tab, word):
-  return 
+  return f'<{tab}>{word}</{tab}>'
 
 # G. extra_end
 # seja um string s com no mínimo duas letras
@@ -47,7 +48,7 @@ def make_tags(tab, word):
 # extra_end('ab'), 'ababab'
 # extra_end('Hi'), 'HiHiHi'  
 def extra_end(s):
-  return 
+  return s[-2:] * 3
 
 # H. first_half
 # seja uma string s
@@ -56,7 +57,7 @@ def extra_end(s):
 # first_half('HelloThere') -> 'Hello'
 # first_half('abcdef') -> 'abc'
 def first_half(s):
-  return 
+  return s[:len(s)//2]
 
 # I. sem_pontas
 # seja uma string s de pelo menos dois caracteres
