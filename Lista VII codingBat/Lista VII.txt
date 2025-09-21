@@ -1,10 +1,3 @@
-Lista 07 CodingBat
-py
-33 de 65
-Fernando Masanori compartilhou este arquivo. Quer aproveitá‑lo melhor?
-#!/usr/bin/python -tt
-# Exercícios by Nick Parlante (CodingBat)
-
 # A. multstring
 # seja uma string s e um inteiro positivo n
 # retorna uma string com n cópias da string original
