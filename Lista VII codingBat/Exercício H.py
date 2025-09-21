@@ -5,7 +5,7 @@
 # first_half('HelloThere') -> 'Hello'
 # first_half('abcdef') -> 'abc'
 def first_half(s):
-  return len(s[0:-1])/2 + s
+  return s[:len(s)//2]
 
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
