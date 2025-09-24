@@ -16,12 +16,9 @@ words = "python"
  
 resultado = []
  
-letras_python = set("python")
-
-resultado = [
-    p for p in palavras
-    if len(p) > 4 and any(letra in letras_python for letra in p)
-]
-
+for palavra in palavras:
+    palavra = palavra.lower()
+    if palavra[0] in words or palavra[-1] in words:
+        resultado.append(palavra)
+ 
 print(resultado)
-print(len(resultado))

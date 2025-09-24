@@ -1,27 +1,10 @@
 # EXERCÍCIO 5
 
-import re
- 
-texto = '''“ The Python Software Foundation and the global Python
-community welcome and encourage participation by everyone. Our community is based on
-mutual respect, tolerance, and encouragement, and we are working to help each other live up
-to these principles. We want our community to be more diverse: whoever you are, and
-whatever your background, we welcome you. ”'''
- 
-res = re.sub(r"[.,:;]", " ", texto)
- 
-palavras = res.split()
- 
-words = "python"
- 
-resultado = []
- 
-letras_python = set("python")
+num1 = int(input('Digite um número: '))
+num2 = int(input('Digite outro número: '))
 
-resultado = [
-    p for p in palavras
-    if len(p) > 4 and any(letra in letras_python for letra in p)
-]
-
-print(resultado)
-print(len(resultado))
+while num2 != 0:
+    resto = num1 % num2
+    num1 = num2
+    num2 = resto
+print(f'O MDC é: {num1}')
