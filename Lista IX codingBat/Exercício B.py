@@ -7,7 +7,13 @@
 # same_first_last([1, 2, 3, 1]) -> True
 # same_first_last([1, 2, 1]) -> True
 def same_first_last(nums):
-  return ''.join([nums and nums[0] == nums[-1] if nums == True else False for i in  range(len(nums))])
+    for i in range(len(nums)):
+        if nums[0] == nums[-1]:
+            return True
+        else:
+            return False
+    if nums == []:
+        return False
 
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
