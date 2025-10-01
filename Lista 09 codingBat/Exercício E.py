@@ -3,7 +3,7 @@
 # retorna a soma dos dois primeiros elementos
 # se a lista tiver menos de dois elementos, soma o que for possível
 def sum2(nums):
-  # return [nums + len(nums) if nums < 2 else nums[0] + nums[1] if len(nums) > 2 else nums for i in range(nums)]
+  return [nums[0] if len(nums) < 2 else nums[0] + nums[1] for i in range(len(nums))]
 
   for i in range(len(nums)):
     if len(nums) < 2:
