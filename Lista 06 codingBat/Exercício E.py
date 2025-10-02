@@ -4,7 +4,7 @@
 # temos problemas se o papagaio estiver falando
 # antes da 7 ou depois das 20
 def papagaio(falando, hora):
-  return falando if falando == True and hora < 7 or hora > 20 else False
+  return falando and (hora < 7 or hora > 20)
 
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.

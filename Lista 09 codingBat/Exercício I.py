@@ -12,18 +12,15 @@
 # pego_correndo(65, False) -> 1
 # pego_correndo(65, True) -> 0 
 def pego_correndo(speed, is_birthday):
-  #return speed + 5 if is_birthday == True else 0 if speed <= 60 else 1 if speed in (61, 80) else 2 if speed > 81 else speed
-
   if is_birthday == True:
-    speed = speed + 5
-    return speed
-  elif speed <= 60:
-    return 0
-  elif speed in (61, 80):
-    return 1 
-  elif speed > 81:
-    return 2
-
+    speed += 5
+  if speed <= 60:
+      return 0
+  elif speed >= 61 and speed <= 80:
+      return 1
+  else:
+      return 2
+    
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
 def test(obtido, esperado):
