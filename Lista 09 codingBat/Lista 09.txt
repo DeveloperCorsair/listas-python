@@ -109,8 +109,8 @@ def squirrel_play(temp, is_summer):
 # pego_correndo(65, False) -> 1
 # pego_correndo(65, True) -> 0 
 def pego_correndo(speed, is_birthday):
-  return
-
+  return speed + 5 if is_birthday == True else 0 if speed < 60 else 1 if speed in (61, 80) else 2 if speed > 81
+  
 
 # J. alarm_clock #
 # day: 0=domingo, 1=segunda, 2=terça, ..., 6=sábado
