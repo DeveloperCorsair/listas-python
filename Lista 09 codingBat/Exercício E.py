@@ -3,13 +3,14 @@
 # retorna a soma dos dois primeiros elementos
 # se a lista tiver menos de dois elementos, soma o que for possível
 def sum2(nums):
-  return [nums[0] if len(nums) < 2 else nums[0] + nums[1] for i in range(len(nums))]
-
-  for i in range(len(nums)):
-    if len(nums) < 2:
-      return nums[0] + i
-    else:
-      return nums[0] + nums[1]
+  return 0 if len(nums) == 0 else nums[0] if len(nums) < 2 else nums[0] + nums[1]
+  
+  if len(nums) == 0:
+    return 0
+  elif len(nums) < 2:
+    return nums[0]
+  else:
+    return nums[0] + nums[1]
 
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
