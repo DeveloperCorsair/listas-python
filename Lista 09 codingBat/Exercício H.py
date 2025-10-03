@@ -1,12 +1,22 @@
-# F. middle_way #
-# sejam duas listas de inteiros a e b
-# retorna uma lista de tamanho 2 contendo os elementos do
-# meio de a e b, suponha que as listas tem tamanho ímpar
-# middle_way([1, 2, 3], [4, 5, 6]) -> [2, 5]
-# middle_way([7, 7, 7], [3, 8, 0]) -> [7, 8]
-# middle_way([5, 2, 9], [1, 4, 5]) -> [2, 4]
-def middle_way(a, b):
-  return a if len(a)/2 in a[:] else b if len(b)/2 in b[:] else False 
+# H. squirrel_play
+# os esquilos na FATEC brincam quando a temperatura está entre 60 e 90
+# graus Fahreneit (são estrangeiros e o termômetro é diferente rs)
+# caso seja verão, então a temperatura superior é 100 no lugar de 90
+# retorne True caso os esquilos brinquem
+# squirrel_play(70, False) -> True
+# squirrel_play(95, False) -> False
+# squirrel_play(95, True) -> True
+def squirrel_play(temp, is_summer):
+  if is_summer:
+    if temp >= 60 and temp <= 100:
+      return True
+    else:
+      return False
+  else:
+    if temp >= 60 and temp <= 90:
+      return True
+    else:
+      return False
 
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
@@ -20,12 +30,19 @@ def test(obtido, esperado):
 
 def main():
   print ()
-  print ('middle_way')
-  test(middle_way([1, 2, 3], [4, 5, 6]), [2, 5])
-  test(middle_way([7, 7, 7], [3, 8, 0]), [7, 8])
-  test(middle_way([5, 2, 9], [1, 4, 5]), [2, 4])
-  test(middle_way([1, 9, 7], [4, 8, 8]), [9, 8])
-  test(middle_way([1, 2, 3], [3, 1, 4]), [2, 1])
-  test(middle_way([1, 2, 3], [4, 1, 1]), [2, 1])
+  print ('squirrel_play')
+  test(squirrel_play(70, False), True)
+  test(squirrel_play(95, False), False)
+  test(squirrel_play(95, True), True)
+  test(squirrel_play(90, False), True)
+  test(squirrel_play(90, True), True)
+  test(squirrel_play(50, False), False)
+  test(squirrel_play(50, True), False)
+  test(squirrel_play(100, False), False)
+  test(squirrel_play(100, True), True)
+  test(squirrel_play(105, True), False)
+  test(squirrel_play(59, False), False)	
+  test(squirrel_play(59, True), False)	
+  test(squirrel_play(60, False), True)
 if __name__ == '__main__':
   main()
