@@ -104,7 +104,7 @@ def sum13(nums):
 # has22([1, 2, 1, 2]) -> False
 # has22([2, 1, 2]) -> False
 def has22(nums):
-  return
+  return True if nums[0] == 2 and nums[1] == 2
 
 
 # L. soma_na_lista #
