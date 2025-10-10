@@ -7,7 +7,7 @@
 # soma_na_lista(4, [2, 2, 2, 2]) -> False
 # soma_na_lista(4, [2, 2, 1, 3]) -> True
 def soma_na_lista(n, lista):
-  return [True if lista[0] + lista[0+1] == n else False for i in range(len(lista)+1)]
+  return any([True if lista[0] + lista[0+1] == n else False for i in range(len(lista)+1)])
 
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
