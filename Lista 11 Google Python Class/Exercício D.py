@@ -5,9 +5,7 @@
 #   'mix', pod' -> 'pox mid'
 #   'dog', 'dinner' -> 'dig donner'
 def mistura2(a, b):
-  s = a[0:1], b[0:1] = b[0:1], a[0:1]
-  return s
-  return a[0:1], b[0:1]
+  return f"{b[:2] + a[2:]} {a[:2] + b[2:]}"
 
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
