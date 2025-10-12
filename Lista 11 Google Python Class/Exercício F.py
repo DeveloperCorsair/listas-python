@@ -4,14 +4,7 @@
 # palavra = 'ana'
 # busca ('ana e mariana gostam de banana', 'ana') == 4
 def busca(frase, palavra):
-  cont = 0
-  for i in range(len(frase)):
-    if frase[i: i+len(palavra)] == palavra:
-      cont += 1
-    else:
-      False
-  return cont
-    #return [palavra if frase[i: i+2] == palavra else False for i in range(len(frase) -1)]
+  return len([i for i in range(len(frase)) if frase[i: i+len(palavra)] == palavra])
 
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
