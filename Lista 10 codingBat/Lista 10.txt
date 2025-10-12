@@ -6,7 +6,8 @@
 # near_ten(17) -> False
 # near_ten(19) -> True
 def near_ten(n):
-  return 
+    r = n % 10
+    return r <= 2 or r >= 8 
 
 
 # B. lone_sum
@@ -16,7 +17,7 @@ def near_ten(n):
 # lone_sum(3, 2, 3) -> 2
 # lone_sum(3, 3, 3) -> 0
 def lone_sum(a, b, c):
-  return
+  return 0 if a == b and a == c and b == c else a if b == c else b if a == c else c if a == b else a+b+c
     
 # C. luck_sum #
 # Soma três inteiros a, b, c
@@ -26,7 +27,13 @@ def lone_sum(a, b, c):
 # lucky_sum(1, 2, 13) -> 3
 # lucky_sum(1, 13, 3) -> 1
 def lucky_sum(a, b, c):
-  return
+    y = [a, b, c]
+    total = 0
+    for num in y:
+        if num == 13:
+            break  # se encontrar 13, ignora este e os próximos
+        total += num
+    return total
 
 
 # D. double_char #
@@ -35,7 +42,10 @@ def lucky_sum(a, b, c):
 # double_char('AAbb') -> 'AAAAbbbb'
 # double_char('Hi-There') -> 'HHii--TThheerree'
 def double_char(s):
-  return
+  o = ''
+  for i in range(len(s)):
+    o += s[i] * 2
+  return o
 
 
 # E. count_hi #
@@ -44,7 +54,7 @@ def double_char(s):
 # count_hi('ABChi hi') -> 2
 # count_hi('hihi') -> 2
 def count_hi(s):
-  return 
+  return s.count('hi') 
 
 
 # F. cat_dog #
@@ -64,7 +74,7 @@ def cat_dog(s):
 # count_code('codexxcode') -> 2
 # count_code('cozexxcope') -> 2
 def count_code(s):
-  return 
+  return sum([s[i: i+2] == 'co' and s[i+3] == 'e' for i in range(len(s)-3)])
 
 
 # H. end_other #
@@ -75,7 +85,9 @@ def count_code(s):
 # end_other('AbC', 'HiaBc') -> True
 # end_other('abc', 'abXabc') -> True
 def end_other(a, b):
-  return
+  a = a.lower()
+  b = b.lower()
+  return a.endswith(b) or b.endswith(a)
 
 
 # I. count_evens
@@ -84,7 +96,7 @@ def end_other(a, b):
 # count_evens([2, 2, 0]) -> 3
 # count_evens([1, 3, 5]) -> 0
 def count_evens(nums):
-  return 
+  return sum([num % 2 == 0 for num in nums]) 
 
 
 # J. sum13 #
@@ -95,7 +107,12 @@ def count_evens(nums):
 # sum13([1, 2, 2, 1, 13]) -> 6
 # sum13([13, 1, 2, 3, 4]) -> 0
 def sum13(nums):
-  return 
+  total = 0
+  for num in nums:
+    if num == 13:
+        break
+    total += num
+  return total 
 
 
 # K. has22 #
@@ -116,7 +133,7 @@ def has22(nums):
 # soma_na_lista(4, [2, 2, 2, 2]) -> False
 # soma_na_lista(4, [2, 2, 1, 3]) -> True
 def soma_na_lista(n, lista):
-  return
+  return any([False if lista[i] == lista[:] else True if lista[i] + lista[i+1] == n else False for i in range(len(lista) - 1)])
 
 
 # M.Difícil: Fila de tijolos sem usar loops #
@@ -128,7 +145,8 @@ def soma_na_lista(n, lista):
 # fila_tijolos(3, 1, 9) -> False
 # fila_tijolos(3, 2, 10) -> True
 def fila_tijolos(n_peq, n_gra, meta):
-  return
+  max_gra = min(meta // 5, n_gra)
+  return (meta - max_gra * 5) <= n_peq and meta <= (n_gra * 5 + n_peq)
 
 
 # Provided simple test() function used in main() to print

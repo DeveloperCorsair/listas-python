@@ -6,7 +6,7 @@
 # count_code('codexxcode') -> 2
 # count_code('cozexxcope') -> 2
 def count_code(s):
-  return any([s[i: i+2] == 'co' and s[i+3] == 'e' for i in range(len(s)-3)])
+  return sum([s[i: i+2] == 'co' and s[i+3] == 'e' for i in range(len(s)-3)])
 
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.

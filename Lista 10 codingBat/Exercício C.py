@@ -6,13 +6,21 @@
 # lucky_sum(1, 2, 13) -> 3
 # lucky_sum(1, 13, 3) -> 1
 def lucky_sum(a, b, c):
-  y = [a, b, c]
+    y = [a, b, c]
+    total = 0
+    for num in y:
+        if num == 13:
+            break  # se encontrar 13, ignora este e os próximos
+        total += num
+    return total
+
+'''y = [a, b, c]
   for i in range(len(y)):
-    if a == 13 or b == 13 or c == 13:
-      q = y[:13] + y[13+1:]
-      return a+b+c - q
+    if i == 13:
+      i[i: i-13]
+      return sum(y+i)
     else:
-      return 1
+      return 1'''
 
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
