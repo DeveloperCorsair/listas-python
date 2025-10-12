@@ -50,7 +50,13 @@ def palindrome(s):
 # palavra = 'ana'
 # busca ('ana e mariana gostam de banana', 'ana') == 4
 def busca(frase, palavra):
-  return 
+  cont = 0
+  for i in range(len(frase)):
+    if frase[i: i+len(palavra)] == palavra:
+      cont += 1
+    else:
+      False
+  return cont
 
 
 # Provided simple test() function used in main() to print
