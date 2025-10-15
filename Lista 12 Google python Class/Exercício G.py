@@ -4,9 +4,12 @@
 # Caso a string já termine em 'ing', acrescentará 'ly'.
 # dica use s.endswith('ing')
 def verbing(s):
-  s = str(s)
-  if s[::-1 ]
-  return 
+  if s.endswith('ing') == True:
+    return s + 'ly'
+  if len(s) >= 3:
+    return s + 'ing'
+  else:
+    return s
 
 def test(obtido, esperado):
   if obtido == esperado:
@@ -22,6 +25,3 @@ def main():
   test(verbing('do'), 'do')
 if __name__ == '__main__':
   main()
-
-n = str(n)
-n[::-1]
