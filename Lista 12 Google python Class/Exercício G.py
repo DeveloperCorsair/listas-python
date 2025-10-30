@@ -4,7 +4,8 @@
 # Caso a string já termine em 'ing', acrescentará 'ly'.
 # dica use s.endswith('ing')
 def verbing(s):
-  return s + 'ly' if s.endswith('ing') else s + 'ing' if len(s) > 3 else s
+  return s + 'ly' if s.endswith('ing') else s + 'ing' if len(s) > 3 else s 
+
   if s.endswith('ing') == True:
     return s + 'ly'
   if len(s) >= 3:
