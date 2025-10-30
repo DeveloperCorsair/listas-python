@@ -5,9 +5,12 @@
 # dica use s.find('not') e s.find('bad') para ver
 # as posições 
 def not_bad(s):
-  if s.find('bad') > s.find('not'):
-    return s.replace('bad', 'good'), s.replace('not', '')
-  return s.find('not')
+  no = s.find('not')
+  bad = s.find('bad')
+  if bad > no:
+    return s[:no] + 'good' + s[bad + 3:]
+  else:
+    return s
 
 def test(obtido, esperado):
   if obtido == esperado:
