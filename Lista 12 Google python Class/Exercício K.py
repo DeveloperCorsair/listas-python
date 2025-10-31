@@ -11,7 +11,7 @@ def conta2(n):
   return contador
 
 def test(obtido, esperado):
-  if obtido == esperado:''
+  if obtido == esperado:
     prefixo = ' Parabéns!'
   else:
     prefixo = ' Ainda não'
