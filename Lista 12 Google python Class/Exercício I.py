@@ -8,11 +8,9 @@
 def inicio_final(a, b):
   initial_a = (len(a) + 1) // 2
   initial_b = (len(b) + 1) // 2
+  return a[:initial_a] + b[:initial_b] + a[initial_a:] + b[initial_b:]
+  
 
-  if len(a) % 2 == 1:
-    return a[:initial_a] + b[:initial_b] + a[initial_a:] + b[initial_b:]
-  else: 
-    False
 
 def test(obtido, esperado):
   if obtido == esperado:
