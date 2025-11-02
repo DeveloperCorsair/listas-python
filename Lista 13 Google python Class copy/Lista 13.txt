@@ -3,7 +3,11 @@
 # com tamanho >= 2 onde o primeiro e o último caracteres são iguais
 # Exemplo: ['aba', 'xyz', 'aa', 'x', 'bbb'] retorna 3
 def fim_igual(words):
-  return
+  contador = 0
+  for i in words:
+    if len(i) >= 2 and i[0] == i[-1]:
+      contador += 1
+  return contador
 
 
 # B. x_antes
@@ -15,11 +19,15 @@ def fim_igual(words):
 # de juntar, a que tem strings que começam com x e a que não
 # Dica: monte duas listas separadas e junte-as no final
 def x_antes(words):
-  return 
-
-
-def last(a): #esta def serve para a letra C
-  return 
+  a = []
+  b = []
+  for i in words:
+    if i[0] == 'x':
+    #if i.startswith('x'):
+      b.append(i)
+    else:
+      a.append(i)
+  return sorted(b) + sorted(a)
 
 
 # C. sort_last
@@ -28,8 +36,11 @@ def last(a): #esta def serve para a letra C
 # Exemplo [(1, 7), (1, 3), (3, 4, 5), (2, 2)] retorna
 # [(2, 2), (1, 3), (3, 4, 5), (1, 7)]
 # Dica: use key=função que você definiu e que retorna o último elemento
+def last(a): #esta def serve para a letra C
+  return a[::-1]
+  
 def sort_last(tuples):
-  return 
+  return sorted(tuples, key=last)
 
 
 def test(obtido, esperado):
