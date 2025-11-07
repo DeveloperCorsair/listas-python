@@ -1,21 +1,13 @@
-# B. x_antes
-# Dada uma lista de strings retorna uma lista onde
-# todos os elementos que começam com x ficam sorteados antes 
-# Ex.: ['mix', 'xyz', 'apple', 'xanadu', 'aardvark'] retorna
-# ['xanadu', 'xyz', 'aardvark', 'apple', 'mix']
-# Obs.: é necessário que cada lista esteja em ordem antes
-# de juntar, a que tem strings que começam com x e a que não
-# Dica: monte duas listas separadas e junte-as no final
-def x_antes(words):
-  a = []
-  b = []
-  for i in words:
-    if i[0] == 'x':
-    #if i.startswith('x'):
-      b.append(i)
-    else:
-      a.append(i)
-  return sorted(b) + sorted(a)
+# E. Cripto desafio!!
+# Dada uma frase, você deve retirar todas as letras repetidas das palavras
+# e ordenar as letras que sobraram
+# Exemplo: 'ana e mariana gostam de banana' vira 'an e aimnr agmost de abn'
+# Dicas: tente transformar cada palavra em um conjunto,
+# depois tente ordenar as letras e montar uma string com o resultado.
+# Utilize listas auxiliares se facilitar
+def cripto(frase):
+  return ' '.join(i[::-1] for i in frase.split())
+  
 
 def test(obtido, esperado):
   if obtido == esperado:
@@ -26,12 +18,10 @@ def test(obtido, esperado):
 
 def main():
   print ()
-  print ('x_antes')
-  test(x_antes(['bbb', 'ccc', 'axx', 'xzz', 'xaa']),
-       ['xaa', 'xzz', 'axx', 'bbb', 'ccc'])
-  test(x_antes(['ccc', 'bbb', 'aaa', 'xcc', 'xaa']),
-       ['xaa', 'xcc', 'aaa', 'bbb', 'ccc'])
-  test(x_antes(['mix', 'xyz', 'apple', 'xanadu', 'aardvark']),
-       ['xanadu', 'xyz', 'aardvark', 'apple', 'mix'])
+  print ('cripto')
+  test(cripto('ana e mariana gostam de banana'),
+       'an e aimnr agmost de abn')
+  test(cripto('Batatinha quando nasce esparrama pelo chão'),
+       'Bahint adnoqu acens aemprs elop choã')
 if __name__ == '__main__':
   main()

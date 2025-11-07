@@ -3,7 +3,7 @@
 # PS: se você usar o comando set deve ficar ordenado
 # como aparece no resultado dos testes
 def remove_iguais(nums):
-  return list(set (nums))
+  return list(set(nums))
 
 def test(obtido, esperado):
   if obtido == esperado:
