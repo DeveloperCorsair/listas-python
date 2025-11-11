@@ -6,7 +6,11 @@
 # depois tente ordenar as letras e montar uma string com o resultado.
 # Utilize listas auxiliares se facilitar
 def cripto(frase):
-  return ' '.join(i[::-1] for i in frase.split())
+  for i in frase.split():
+    sorted(i)
+    ''.join(set(i))
+  return i
+  #return ' '.join(i[::-1] for i in frase.split())
   
 
 def test(obtido, esperado):
