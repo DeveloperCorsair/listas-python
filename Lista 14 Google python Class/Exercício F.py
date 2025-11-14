@@ -1,14 +1,14 @@
-# C. sort_last
-# Dada uma lista de tuplas não vazias retorna uma tupla ordenada
-# por ordem crescente do último elemento 
-# Exemplo [(1, 7), (1, 3), (3, 4, 5), (2, 2)] retorna
-# [(2, 2), (1, 3), (3, 4, 5), (1, 7)]
-# Dica: use key=função que você definiu e que retorna o último elemento
-def last(a): #esta def serve para a letra C
-  return a[::-1]
-  
-def sort_last(tuples):
-  return sorted(tuples, key=last)
+# F. Derivada de um polinômio
+# Os coeficientes de um polinômio estão numa lista na ordem do seu grau.
+# Você deverá devolver uma lista com os coeficientes da derivada.
+# Exemplo: [3, 2, 5, 2] retorna [2, 10, 6]
+# A derivada de 3 + 2x + 5x^2 + 2x^3 é 2 + 10x + 6x^2
+def derivada(coef):
+    nova = []
+    for i, a in enumerate(coef):
+      if i > 0:
+        nova.append(a * i)
+    return nova
 
 def test(obtido, esperado):
   if obtido == esperado:
@@ -19,12 +19,8 @@ def test(obtido, esperado):
 
 def main():
   print ()
-  print ('sort_last')
-  test(sort_last([(1, 3), (3, 2), (2, 1)]),
-       [(2, 1), (3, 2), (1, 3)])
-  test(sort_last([(2, 3), (1, 2), (3, 1)]),
-       [(3, 1), (1, 2), (2, 3)])
-  test(sort_last([(1, 7), (1, 3), (3, 4, 5), (2, 2)]),
-       [(2, 2), (1, 3), (3, 4, 5), (1, 7)])
+  print ('derivada de polinômio')
+  test(derivada([3, 0, 4, 3, 5]), [0, 8, 9, 20])
+  test(derivada([4, 16, 1]), [16, 2])
 if __name__ == '__main__':
   main()
