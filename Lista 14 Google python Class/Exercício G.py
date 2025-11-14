@@ -6,10 +6,15 @@
 # Não vale converter a lista em número para somar diretamente
 def soma(n1, n2):
   lista = []
+  resto = 0
   for i, x in zip(n1, n2):
-    a = i + x
-    lista.append(a)
-  return lista[::-1]
+    s = i + x + resto
+    lista.append(s % 10)
+    resto = s // 10
+  if resto:
+    lista.append(resto)
+  return lista
+
 
 def test(obtido, esperado):
   if obtido == esperado:
