@@ -1,14 +1,12 @@
-# C. sort_last
-# Dada uma lista de tuplas não vazias retorna uma tupla ordenada
-# por ordem crescente do último elemento 
-# Exemplo [(1, 7), (1, 3), (3, 4, 5), (2, 2)] retorna
-# [(2, 2), (1, 3), (3, 4, 5), (1, 7)]
-# Dica: use key=função que você definiu e que retorna o último elemento
-def last(a): #esta def serve para a letra C
-  return a[::-1]
-  
-def sort_last(tuples):
-  return sorted(tuples, key=last)
+# H. Anagrama
+# Verifique se duas palavras são anagramas,
+# isto é, uma palavra é permutação das letras da outra
+# *sem usar while ou for*
+# anagrama('aberto', 'rebato') = True
+# anagrama('amor', 'ramo') = True
+# anagrama('aba', 'baba') = False
+def anagrama(s1, s2):
+  return True if len(s1) == len(s2) and set(s1) == set(s2) else False
 
 def test(obtido, esperado):
   if obtido == esperado:
@@ -19,12 +17,20 @@ def test(obtido, esperado):
 
 def main():
   print ()
-  print ('sort_last')
-  test(sort_last([(1, 3), (3, 2), (2, 1)]),
-       [(2, 1), (3, 2), (1, 3)])
-  test(sort_last([(2, 3), (1, 2), (3, 1)]),
-       [(3, 1), (1, 2), (2, 3)])
-  test(sort_last([(1, 7), (1, 3), (3, 4, 5), (2, 2)]),
-       [(2, 2), (1, 3), (3, 4, 5), (1, 7)])
+  print ('anagrama')
+  test(anagrama('abacate', 'abacatx'), False)
+  test(anagrama('sim', 'xxs'), False)
+  test(anagrama('sim', 'siiimmmmm'), False)
+  test(anagrama('iracema', 'america'), True)
+  test(anagrama('ator', 'rota'), True)
+  test(anagrama('aberto', 'rebato'), True)
+  test(anagrama('amor', 'roma'), True)
+  test(anagrama('ramo', 'amor'), True)
+  test(anagrama('baba', 'aba'), False)
+  test(anagrama('casa', 'cassa'), False)
+  test(anagrama('palmeiras', 'abacate'), False)
+  test(anagrama('arco', 'roca'), True)
+  test(anagrama('alegria', 'alergia'), True)
+  test(anagrama('cantiga', 'catinga'), True)
 if __name__ == '__main__':
   main()
