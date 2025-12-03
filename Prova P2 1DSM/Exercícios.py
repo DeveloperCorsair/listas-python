@@ -26,3 +26,9 @@ def diferenca_na_lista (n, lista):
 print(diferenca_na_lista(1, [1,0,0,1]))
 
 
+# Exercício 4
+#Explicação
+""" Retorna uma string, onde todos os caracteres iguais ao primeiro são trocados por '*', com exceção do primeiro que aparecer na string."""
+
+def fixa_ultimo (s):
+    return s[:-1].replace(s[-1], '*') + s[-1]
