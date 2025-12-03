@@ -41,8 +41,8 @@ def soma_impares_finais(n):
     n = str(n) [::-1]
     cont = 0
     for c in n:
-        if int(n) % 2 != 0:
-            cont += int(n)
+        if int(c) % 2 != 0:
+            cont += int(c)
         else:
             break
     return cont
