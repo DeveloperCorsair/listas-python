@@ -32,3 +32,17 @@ print(diferenca_na_lista(1, [1,0,0,1]))
 
 def fixa_ultimo (s):
     return s[:-1].replace(s[-1], '*') + s[-1]
+print(fixa_ultimo('arara'))
+
+# Exercício 5
+#Explicação
+""" Retorna a quantidade de zeros consecultivos que tem no final do número. Caso o número, do indice atual(c), não seja um '0', ele para a função e retorna no contador a quantidade de zeros. """
+def soma_impares_finais(n):
+    n = str(n) [::-1]
+    cont = 0
+    for c in n:
+        if int(n) % 2 != 0:
+            cont += int(n)
+        else:
+            break
+    return cont
