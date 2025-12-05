@@ -37,6 +37,7 @@ print(fixa_ultimo('arara'))
 # Exercício 5
 #Explicação
 """ Retorna a quantidade de zeros consecultivos que tem no final do número. Caso o número, do indice atual(c), não seja um '0', ele para a função e retorna no contador a quantidade de zeros. """
+
 def soma_impares_finais(n):
     n = str(n) [::-1]
     cont = 0
@@ -46,3 +47,16 @@ def soma_impares_finais(n):
         else:
             break
     return cont
+
+# Exercício 6
+#Explicação
+""" Dentro da função ordena_diferente abre a função last, onde retorna o valor que está no último índice do parâmetro (x). Após isso, volta para a primeira função e retorna os nomes em ordem crescente, de acordo com a última letra da armazenada na função last """
+
+def ordena_por_tamanho(nomes):
+    def last(x):
+        return len(x)
+    return sorted(nomes, key=last)
+
+# Exercício 7
+def remove(p):
+    return ''.join(set(p))
