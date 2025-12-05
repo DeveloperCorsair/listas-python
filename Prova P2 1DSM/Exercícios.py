@@ -71,8 +71,8 @@ def inverte(frase):
     return ' '.join(contrario)
 print(inverte('python é divertido')) 
 
-#Exercício 9
-a = input()
+# Exercício 9
+a = 8
 if a > 10 and a % 6 == 3:
     print('A', end = ' ')
 elif a > 10 and a < 20:
@@ -87,3 +87,14 @@ b = 12
 c = 9
 ab = assim que atender a condição de 'A' não vai ser possível atender a condição de 'B'.
 feliz natal = não é imprimido, pois não há condição para ele. """
+
+# Exercício 10
+#Explicação
+# a)
+""" Percorre a seq1 e retorna uma lista com os elementos em comuns que estiverem tanto na seq1, quanto na seq2 """
+# b) 
+""" ['a', 'l'], [1, 3], ['a'] """
+# c)
+def nao_comum(seq1, seq2):
+    return [x for x in seq1 if x not in seq2]
+print(nao_comum('azul',['a', 'b']))
