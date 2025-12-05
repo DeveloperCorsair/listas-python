@@ -60,3 +60,13 @@ def ordena_por_tamanho(nomes):
 # Exercício 7
 def remove(p):
     return ''.join(set(p))
+print(remove('banana'))
+
+# Exercício 8
+def inverte(frase):
+    frase = frase.split()
+    contrario = []
+    for i in frase:
+        contrario.append(i[::-1])
+    return ' '.join(contrario)
+print(inverte('python é divertido')) 
