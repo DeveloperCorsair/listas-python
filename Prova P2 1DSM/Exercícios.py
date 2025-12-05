@@ -70,3 +70,20 @@ def inverte(frase):
         contrario.append(i[::-1])
     return ' '.join(contrario)
 print(inverte('python é divertido')) 
+
+#Exercício 9
+a = input()
+if a > 10 and a % 6 == 3:
+    print('A', end = ' ')
+elif a > 10 and a < 20:
+    print('B', end = ' ')
+else:
+    print('C', end = ' ')
+
+""" respostas:
+ab = n/a
+a = 15
+b = 12
+c = 9
+ab = assim que atender a condição de 'A' não vai ser possível atender a condição de 'B'.
+feliz natal = não é imprimido, pois não há condição para ele. """
